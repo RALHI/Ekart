@@ -39,13 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-EXTERNAL_APPS = [
-    'category',
-    'account',
-]
-
-INSTALLED_APPS += EXTERNAL_APPS
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -123,17 +116,30 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIC_ROOT = BASE_DIR / 'static'
-
-STATICFILES_DIRS = [
-    'Ekart/static'
-]
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-#Custom Add#
+#################################### Added #################################
+
+# App Register
+EXTERNAL_APPS = [
+    'category',
+    'account',
+]
+
+INSTALLED_APPS += EXTERNAL_APPS
+
+#Custom User Model
 AUTH_USER_MODEL = "account.Account"
+
+# Static File 
+STATIC_ROOT = BASE_DIR / 'static'
+
+STATICFILES_DIRS = [
+    'Ekart/static'
+]
+
+#Media File
