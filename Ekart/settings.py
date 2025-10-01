@@ -142,4 +142,6 @@ STATICFILES_DIRS = [
     'Ekart/static'
 ]
 
-#Media File
+#Media File Configuration
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
